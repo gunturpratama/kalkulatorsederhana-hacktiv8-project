@@ -49,11 +49,11 @@
 
     <script>
         window.onload = function () {
-            var btn = document.getElementsByTagName('span'),
+            let btn = document.getElementsByTagName('span'),
                 hasil = document.querySelectorAll('.result p')[0],
                 hapus = document.getElementsByClassName('clear')[0];
 
-            for (var i = 0; i < btn.length; i++) {
+            for (let i = 0; i < btn.length; i++) {
                 if (btn[i].innerHTML === '=') {
                     btn[i].addEventListener("click", kalkulasi(i));
                 } else {
@@ -75,7 +75,7 @@
 
             function kalkulasi(i) {
                 return function () {
-                    var hasil_akhir = hasil.innerHTML;
+                    let hasil_akhir = hasil.innerHTML;
 
 
                     hasil.innerHTML = eval(hasil_akhir);
